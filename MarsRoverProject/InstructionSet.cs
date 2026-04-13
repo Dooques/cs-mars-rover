@@ -8,23 +8,20 @@ namespace MarsRover
 {
     public class InstructionSet()
     {
-        private static readonly List<InstructionSet> InstructionSetList = [];
-        Instruction Command;
-        Direction DirectionResult;
+        private static readonly List<Instruction> InstructionSetList = [];
 
-        public static void CreateInstructionSet(Instruction instructionCommand, Direction direction)
+        public static void CreateInstructionSet(Instruction instructionCommand)
         {
             if (instructionCommand is Instruction.E && direction is Direction.None)
             {
                 return;
             }
 
-            InstructionSetList.Add(new InstructionSet(instructionCommand, direction));
+            InstructionSetList.Add(instructionCommand));
         }
         public InstructionSet(Instruction instructionCommand, Direction direction) : this()
         {
             this.Command = instructionCommand;
-            this.DirectionResult = direction;
         }
 
         public static List<InstructionSet> GetListOfInstructions()

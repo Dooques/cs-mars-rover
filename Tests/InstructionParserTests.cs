@@ -32,12 +32,25 @@ namespace Tests
         public void InstructionParser_ReturnListWithOneValue_SingleCharacterString()
         {
             var input = "M";
-            List<MarsRover.InstructionSet> expected = [new InstructionSet(Instruction.M, Direction.North)];
+            List<MarsRover.InstructionSet> expected = 
+                new List<InstructionSet> { new InstructionSet(Instruction.M, Direction.North) };
 
             var instructionParser = new InstructionParser(new Position(2, 2, Direction.North));
             var result = instructionParser.ParseUserInstructions(input);
 
-            Assert.That(result, Is.EqualTo(expected));
+            Console.WriteLine("Result:");
+            result.ForEach( i =>
+            {
+                Console.WriteLine($"{i.Command}");
+            });
+
+            Console.WriteLine("Expected:");
+            result.ForEach( i =>
+            {
+                Console.WriteLine($"{i.Command}, {i.DirectionResult}");
+            });
+
+            Assert.That(result, Is.EquivalentTo(expected));
         }
 
        

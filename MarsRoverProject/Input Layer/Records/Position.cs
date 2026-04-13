@@ -4,8 +4,8 @@ namespace MarsRover
 {
 	public record Position(int x, int y, Direction compassDirection)
 	{
-		int X = x;
-		int Y = y;
-		Direction Compass = compassDirection;
+		public int X = x;
+		public int Y = y;
+		public Direction Direction = compassDirection;
 	}
 }
