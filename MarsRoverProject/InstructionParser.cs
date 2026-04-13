@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MarsRover
 {
-    internal class InstructionParser
+    public class InstructionParser
     {
-        static List<InstructionSet> ParseUserInstructions(string userInput)
+        public static List<InstructionSet> ParseUserInstructions(string userInput)
         {
             return [];
         }
