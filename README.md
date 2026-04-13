@@ -9,8 +9,16 @@ A terminal app for moving Rovers around on the surface of Mars.
 - Show the course of the rover before confirming the movement
 - User can control multiple rovers with numbers before the movement input
 - Rovers can pick up samples using arms and take photographs
+
 ### Potential Extra Features
 - Larger area to move
 - Power ups
 - Dangerous Terrain
 - Life?
+
+
+#### Instruction Parsing
+1. User should enter instructions via the terminal
+2. Parse Plateau size
+3. Parse Rover initial position
+4. Parse Instructions to Move Rover

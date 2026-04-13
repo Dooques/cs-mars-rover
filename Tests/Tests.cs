@@ -3,9 +3,9 @@ namespace Tests
     public class Tests
     {
         [Test]
-        public void Successfully_runs_a_test()
+        public void InstructionSet_ShouldReturnInstructionSet()
         {
-            Assert.That(true, Is.True);
+            
         }
     }
 }
