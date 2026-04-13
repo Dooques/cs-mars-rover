@@ -30,7 +30,6 @@
         {
             var expected = new List<MarsRover.InstructionSet>();
 
-            MarsRover.InstructionSet.CreateInstructionSet(MarsRover.Instruction.E, MarsRover.Direction.None);
             List<MarsRover.InstructionSet> result = MarsRover.InstructionSet.GetListOfInstructions();
             result.ForEach(Console.WriteLine);
 

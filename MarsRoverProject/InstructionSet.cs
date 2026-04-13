@@ -19,10 +19,12 @@ namespace MarsRover
                 return;
             }
 
-            InstructionSet instruction = new();
-            instruction.InstructionCommand = instructionCommand;
-            instruction.Direction = direction;
-            InstructionSetList.Add(instruction);
+            InstructionSetList.Add(new InstructionSet(instructionCommand, direction));
+        }
+        public InstructionSet(Instruction instructionCommand, Direction direction) : this()
+        {
+            this.InstructionCommand = instructionCommand;
+            this.Direction = direction;
         }
 
         public static List<InstructionSet> GetListOfInstructions()
