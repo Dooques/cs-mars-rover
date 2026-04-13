@@ -9,13 +9,16 @@ namespace MarsRover
     public class InstructionParser
     {
         private Position CurrentPosition;
-        public static List<InstructionSet> ParseUserInstructions(string userInput)
+
+        public List<InstructionSet> ParseUserInstructions(string userInput)
         {
-            var startPosition = new Position(2, 2, Direction.North);
             var instructions = userInput.Split(' ').Select(i =>
             {
-                InstructionSet.CreateInstructionSet()
-            });
+                var parseResult = ParseInstruction(i, CurrentPosition);
+                Console.WriteLine(parseResult);
+                InstructionSet.CreateInstructionSet(parseResult.Item1, parseResult.Item2);
+                return i;
+            }).ToList();
             return [];
         }
 
@@ -26,10 +29,9 @@ namespace MarsRover
 
         public (Instruction, Direction) ParseInstruction(string command, Position currentposition)
         {
-            if (command == "") return (Instruction.E, Direction.None);
+            if (command == "") return (default, default);
 
             return (default, default);
-
         }
     }
 }
