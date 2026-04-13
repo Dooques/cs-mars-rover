@@ -11,7 +11,7 @@ namespace Tests
             List<Instruction> expected = [];
 
             var instructionParser = new InputParser();
-            var result = instructionParser.ParseUserInstructions("");
+            var result = instructionParser.ParseRoverInstructions("");
 
             Assert.That(result, Is.EqualTo(expected));
         }
@@ -23,7 +23,7 @@ namespace Tests
             List<Instruction> expected = [];
 
             var instructionParser = new InputParser();
-            var result = instructionParser.ParseUserInstructions(input);
+            var result = instructionParser.ParseRoverInstructions(input);
 
             Assert.That(result, Is.EqualTo(expected));
         }
@@ -36,7 +36,7 @@ namespace Tests
             List<Instruction> expected = new List<Instruction> { Instruction.M };
 
             var instructionParser = new InputParser();
-            var result = instructionParser.ParseUserInstructions(input);
+            var result = instructionParser.ParseRoverInstructions(input);
 
             Console.WriteLine("Result:");
             result.ForEach( i =>
@@ -60,7 +60,7 @@ namespace Tests
             List<Instruction> expected = [Instruction.M, Instruction.L, Instruction.R];
 
             var instructionParser = new InputParser();
-            var result = instructionParser.ParseUserInstructions("MLR");
+            var result = instructionParser.ParseRoverInstructions("MLR");
 
             result.ForEach(r =>
             {
@@ -76,7 +76,7 @@ namespace Tests
             List<Instruction> expected = [];
 
             var instructionParser = new InputParser();
-            var result = instructionParser.ParseUserInstructions("YUIOP");
+            var result = instructionParser.ParseRoverInstructions("YUIOP");
 
             Assert.That(result, Is.EqualTo(expected));
         }
@@ -86,7 +86,7 @@ namespace Tests
             List<Instruction> expected = [];
 
             var instructionParser = new InputParser();
-            var result = instructionParser.ParseUserInstructions("YUIOP");
+            var result = instructionParser.ParseRoverInstructions("YUIOP");
 
             Assert.That(result, Is.EqualTo(expected));
         }

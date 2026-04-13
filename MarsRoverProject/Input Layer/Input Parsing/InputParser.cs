@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarsRover.Input_Layer;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -10,9 +11,9 @@ namespace MarsRover
 {
     public class InputParser
     {
-        public List<Instruction> ParseUserInstructions(string userInput)
+        public List<Instruction> ParseRoverInstructions(string userInput)
         {
-            var im = new InstructionManager();
+            var im = new DataManager();
             foreach (var i in userInput.ToCharArray().ToList())
             {
                 var instruction = i.ToString().ToUpper() switch
@@ -31,6 +32,10 @@ namespace MarsRover
                 im.AddInstruction(instruction);
             };
             return im.GetListOfInstructions();
+        }
+        public PlateauSize ParsePlateauInput(string userInput)
+        {
+            return new PlateauSize(0, 0);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Tests
         [Test(Description = "Should return empty instruction set list when no items created.")]
         public void InstructionSet_EmptyList_PassedEmptyString()
         {
-            var im = new InstructionManager();
+            var im = new DataManager();
             List<Instruction> result = im.GetListOfInstructions();
 
             Assert.That(result, Is.Empty);
@@ -18,7 +18,7 @@ namespace Tests
         {
             List<Instruction> expected = new();
 
-            var im = new InstructionManager();
+            var im = new DataManager();
             im.AddInstruction(Instruction.E);
 
             List<Instruction> result = im.GetListOfInstructions();
@@ -31,7 +31,7 @@ namespace Tests
         {
             List<Instruction> expected = new() { Instruction.M };
 
-            var im = new InstructionManager();
+            var im = new DataManager();
             im.AddInstruction(Instruction.M);
 
             List<Instruction> result = im.GetListOfInstructions();

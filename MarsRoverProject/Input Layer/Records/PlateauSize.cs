@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MarsRover.Input_Layer
+namespace MarsRover
 {
-    internal record PlataeuSize(int x, int y)
+    public record PlateauSize(int x, int y)
     {
-        int Width = x;
-        int Height = y;
+        public int Width = x;
+        public int Height = y;
     }
 }

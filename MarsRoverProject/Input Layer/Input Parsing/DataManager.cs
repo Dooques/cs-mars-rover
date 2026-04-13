@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace MarsRover
 {
-    public class InstructionManager()
+    public class DataManager()
     {
         private List<Instruction> InstructionList = [];
+        private PlataeuSize? PlateauSizeRecord = null;
+
+        public void CreatePlateau(int x, int y)
+        {
+            PlateauSizeRecord = new PlataeuSize(x, y);
+        }
 
         public void AddInstruction(Instruction instructionCommand)
         {
