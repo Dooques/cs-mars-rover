@@ -14,7 +14,11 @@ namespace MarsRover
 
         public static void CreateInstructionSet(Instruction instructionCommand, Direction direction)
         {
-            
+            if (instructionCommand is Instruction.E && direction is Direction.None)
+            {
+                return;
+            }
+
             InstructionSet instruction = new();
             instruction.InstructionCommand = instructionCommand;
             instruction.Direction = direction;
