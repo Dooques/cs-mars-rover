@@ -1,5 +1,4 @@
-﻿using MarsRover.Input_Layer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -33,9 +32,30 @@ namespace MarsRover
             };
             return im.GetListOfInstructions();
         }
-        public PlateauSize ParsePlateauInput(string userInput)
+        public void ParsePlateauInput(string userInput)
         {
-            return new PlateauSize(0, 0);
+            var dm = new DataManager();
+
+            int x = 0;
+            int y = 0;
+            foreach (var i in userInput.ToCharArray())
+            {
+                if (x == 0) 
+                {
+                    Console.WriteLine(i);
+                    Int32.TryParse(i.ToString(), out x);
+                    continue;
+                } else if (y == 0)
+                {
+                    Console.WriteLine(i);
+                    Int32.TryParse(i.ToString(), out y);
+                    continue;
+                } else if (x > 0 && y > 0)
+                {
+                    break;
+                }
+            }
+            dm.CreatePlateau(x, y);
         }
     }
 }

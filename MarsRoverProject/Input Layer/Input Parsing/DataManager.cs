@@ -9,11 +9,11 @@ namespace MarsRover
     public class DataManager()
     {
         private List<Instruction> InstructionList = [];
-        private PlataeuSize? PlateauSizeRecord = null;
+        private PlateauSize? PlateauSizeRecord = null;
 
         public void CreatePlateau(int x, int y)
         {
-            PlateauSizeRecord = new PlataeuSize(x, y);
+            PlateauSizeRecord = new PlateauSize(x - 1, y - 1);
         }
 
         public void AddInstruction(Instruction instructionCommand)

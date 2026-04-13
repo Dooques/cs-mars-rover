@@ -9,6 +9,6 @@ namespace MarsRover
     public record PlateauSize(int x, int y)
     {
         public int Width = x;
-        public int Height = y;
+        public int Length = y;
     }
 }
