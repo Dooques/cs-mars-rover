@@ -32,7 +32,8 @@ namespace MarsRover
             };
             return im.GetListOfInstructions();
         }
-        public void ParsePlateauInput(string userInput)
+
+        public PlateauSize ParsePlateauInput(string userInput)
         {
             var dm = new DataManager();
 
@@ -45,7 +46,8 @@ namespace MarsRover
                     Console.WriteLine(i);
                     Int32.TryParse(i.ToString(), out x);
                     continue;
-                } else if (y == 0)
+                } 
+                else if (y == 0)
                 {
                     Console.WriteLine(i);
                     Int32.TryParse(i.ToString(), out y);
@@ -53,9 +55,14 @@ namespace MarsRover
                 } else if (x > 0 && y > 0)
                 {
                     break;
-                }
-            }
+                }            }
             dm.CreatePlateau(x, y);
+            return dm.GetPlateau();
+        }
+
+        public Position ParsePositionInput()
+        {
+            return new Position(0, 0, Direction.North);
         }
     }
 }
