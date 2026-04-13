@@ -2,7 +2,7 @@ using System;
 
 namespace MarsRover
 {
-	internal enum Compass
+	internal enum Direction
 	{
 		North, South, East, West
 	}
