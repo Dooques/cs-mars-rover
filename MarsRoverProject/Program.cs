@@ -1,4 +1,4 @@
-﻿namespace MarsRoverProject
+﻿namespace MarsRover
 {
     internal class Program
     {

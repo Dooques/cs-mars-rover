@@ -12,12 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{8EC462FD-D
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Input Layer", "Input Layer", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-	ProjectSection(SolutionItems) = preProject
-		Instruction.cs = Instruction.cs
-		Compass.cs = Compass.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
