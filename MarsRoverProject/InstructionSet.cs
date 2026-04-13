@@ -9,8 +9,8 @@ namespace MarsRover
     public class InstructionSet()
     {
         private static readonly List<InstructionSet> InstructionSetList = [];
-        Instruction InstructionCommand;
-        Direction Direction;
+        Instruction Command;
+        Direction DirectionResult;
 
         public static void CreateInstructionSet(Instruction instructionCommand, Direction direction)
         {
@@ -23,8 +23,8 @@ namespace MarsRover
         }
         public InstructionSet(Instruction instructionCommand, Direction direction) : this()
         {
-            this.InstructionCommand = instructionCommand;
-            this.Direction = direction;
+            this.Command = instructionCommand;
+            this.DirectionResult = direction;
         }
 
         public static List<InstructionSet> GetListOfInstructions()
