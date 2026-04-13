@@ -14,6 +14,7 @@ namespace MarsRover
 
         public static void CreateInstructionSet(Instruction instructionCommand, Direction direction)
         {
+            
             InstructionSet instruction = new();
             instruction.InstructionCommand = instructionCommand;
             instruction.Direction = direction;
