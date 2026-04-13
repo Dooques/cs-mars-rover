@@ -22,3 +22,8 @@ A terminal app for moving Rovers around on the surface of Mars.
 2. Parse Plateau size
 3. Parse Rover initial position
 4. Parse Instructions to Move Rover
+
+##### Instruction Set Tests
+1. Tests creating an empty list when passing no values
+2. Return Empty List when no vaues are created
+3. Creating one value and return list with that instruction

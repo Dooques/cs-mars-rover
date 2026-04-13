@@ -10,7 +10,7 @@ namespace MarsRover
     {
         static List<InstructionSet> ParseUserInstructions(string userInput)
         {
-
+            return [];
         }
     }
 }

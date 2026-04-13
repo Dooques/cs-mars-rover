@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace MarsRover
 {
-    internal record InstructionSet()
+    public class InstructionSet()
     {
         private static readonly List<InstructionSet> InstructionSetList = [];
         Instruction InstructionCommand;
         Direction Direction;
 
-        public InstructionSet(Instruction instructionCommand, Direction direction) : this()
+        public static void CreateInstructionSet(Instruction instructionCommand, Direction direction)
         {
-            this.InstructionCommand = instructionCommand;
-            this.Direction = direction;
-            InstructionSetList.Add(this);
+            InstructionSet instruction = new();
+            instruction.InstructionCommand = instructionCommand;
+            instruction.Direction = direction;
+            InstructionSetList.Add(instruction);
         }
 
-        public List<InstructionSet> GetListOfInstructions()
+        public static List<InstructionSet> GetListOfInstructions()
         {
             return InstructionSetList;
         }

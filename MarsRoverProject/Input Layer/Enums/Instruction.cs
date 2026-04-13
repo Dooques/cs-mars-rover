@@ -2,8 +2,8 @@
 
 namespace MarsRover
 { 
-	public enum Instruction()
+	public enum Instruction
 	{
-		M, L, R
+		M, L, R, E
 	}
 }
