@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Logic Layer\" />
+    <Folder Include="Logic\" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MarsRover.Input
+namespace MarsRover.Model
 { 
 	public enum Instruction
 	{

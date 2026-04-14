@@ -4,9 +4,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MarsRover;
+using MarsRover.Input;
 
-namespace Tests
+namespace Tests.Input
 {
     public class PlateauParsingTests
     {

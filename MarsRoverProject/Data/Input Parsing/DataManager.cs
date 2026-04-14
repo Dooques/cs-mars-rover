@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MarsRover.Input;
+using MarsRover.Model;
 
-namespace MarsRover.Model
+namespace MarsRover.Input
 {
     public class DataManager()
     {

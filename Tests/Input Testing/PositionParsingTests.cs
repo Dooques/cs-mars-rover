@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MarsRover.Model;
+using MarsRover.Input;
 
-namespace Tests
+namespace Tests.Input
 {
     internal class PositionParsingTests
     {

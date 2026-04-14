@@ -1,6 +1,7 @@
-using MarsRover;
+using MarsRover.Model;
+using MarsRover.Input;
 
-namespace Tests
+namespace Tests.Input
 {
     public class InstructionParserTests
     {

@@ -1,8 +1,9 @@
-﻿using MarsRover;
+﻿using MarsRover.Input;
+using MarsRover.Model;
 
-namespace Tests
+namespace Tests.Input
 {
-    public class InstructionSetTests
+    public class DataManagerTests
     {
         [Test(Description = "Should return empty instruction set list when no items created.")]
         public void InstructionSet_EmptyList_PassedEmptyString()
