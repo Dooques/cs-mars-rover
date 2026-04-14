@@ -1,6 +1,6 @@
 using System;
 
-namespace MarsRover
+namespace MarsRover.Input
 {
 	public enum Direction
 	{

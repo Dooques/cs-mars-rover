@@ -1,6 +1,7 @@
 ﻿using System;
+using MarsRover.Input;
 
-namespace MarsRover
+namespace MarsRover.Model
 {
 	public record Position(int x, int y, Direction compassDirection)
 	{
