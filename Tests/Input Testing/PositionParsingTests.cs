@@ -21,7 +21,7 @@ namespace Tests.Input
         public void ParsingPosition_ReturnPosition_VariousValues(string input, int expectedX, int expectedY, Direction expectedDirection)
         {
             var ip = new InputParser();
-            var testPosition = ip.ParsePositionInput(input);
+            var testPosition = ip.ParsePosition(input);
 
             Assert.That(testPosition.X, Is.EqualTo(expectedX));
             Assert.That(testPosition.Y, Is.EqualTo(expectedY));

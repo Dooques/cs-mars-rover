@@ -20,7 +20,7 @@ namespace Tests.Input
         public void ParsePlateau_ReturnPlateau_VariousInputs(string input, int expectedX, int expectedY)
         {
             var ip = new InputParser();
-            var result = ip.ParsePlateauInput(input);
+            var result = ip.ParsePlateauSize(input);
 
             Assert.That(result.Length, Is.EqualTo(expectedY));
             Assert.That(result.Width, Is.EqualTo(expectedX));

@@ -34,7 +34,7 @@ namespace MarsRover.Input
             return im.GetListOfInstructions();
         }
 
-        public PlateauSize ParsePlateauInput(string userInput)
+        public PlateauSize ParsePlateauSize(string userInput)
         {
             var dm = new DataManager();
 
@@ -44,13 +44,11 @@ namespace MarsRover.Input
             {
                 if (x == 0) 
                 {
-                    Console.WriteLine(i);
                     Int32.TryParse(i.ToString(), out x);
                     continue;
                 } 
                 else if (y == 0)
                 {
-                    Console.WriteLine(i);
                     Int32.TryParse(i.ToString(), out y);
                     continue;
                 } else if (x > 0 && y > 0)
@@ -62,7 +60,7 @@ namespace MarsRover.Input
             return dm.GetPlateau();
         }
 
-        public Position ParsePositionInput(string userInput)
+        public Position ParsePosition(string userInput)
         {
             var dm = new DataManager();
             int x = 0;
@@ -72,13 +70,11 @@ namespace MarsRover.Input
             {
                 if (x == 0)
                 {
-                    Console.WriteLine(i);
                     Int32.TryParse(i.ToString(), out x);
                     continue;
                 }
                 else if (y == 0)
                 {
-                    Console.WriteLine(i);
                     Int32.TryParse(i.ToString(), out y);
                     continue;
                 }
@@ -96,7 +92,6 @@ namespace MarsRover.Input
                     {
                         continue;
                     }
-                    Console.WriteLine(i);
                     Enum.TryParse(directionNormalised, out direction);
                 }           
             }
