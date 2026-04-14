@@ -21,8 +21,29 @@ A terminal app for moving Rovers around on the surface of Mars.
 - Plateau Size record - stores int Height and Width
 - Position Record - Stores X, Y & Direction 
 
-### Parsing Layer
+### Input Layer
 - Data Manager stores data for the program in memory
 	- Contains Plateau Size, Starting Position of Rover & next Instruction
 - Input Parser takes string inputs and converts them to usable instructions for the Logic Layer.
 	- Separate methods for Plateau, Position and Instructions.
+
+##### Mission Control Class
+- Convert instructions into movement
+- Check if positions are currently occupied by communicating with Rovers
+- Takes Plateau Object in constructor (which contains current rover positions)
+- Takes Instructions as method argument
+- Uses movement instructions to determine new position of the rover
+- Move method: M instructions increase/decrease X/Y values depending on direction
+- Turn Method: L/R inputs change Compass Direction
+
+##### Rover Class
+- Rover Name
+- Attachments (Arms, Jetpack, Drill)
+- Current Position of Rover
+
+##### Plateau Class
+- 2D or 3D array for environment
+- Rover Object Dictionary
+
+
+
