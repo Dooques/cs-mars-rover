@@ -28,18 +28,21 @@ A terminal app for moving Rovers around on the surface of Mars.
 	- Separate methods for Plateau, Position and Instructions.
 
 ##### Mission Control Class
-- Convert instructions into movement
 - Check if positions are currently occupied by communicating with Rovers
-- Takes Plateau Object in constructor (which contains current rover positions)
-- Takes Instructions as method argument
-- Uses movement instructions to determine new position of the rover
-- Move method: M instructions increase/decrease X/Y values depending on direction
-- Turn Method: L/R inputs change Compass Direction
+- Takes Plateau Object in constructor  
+- Deploy Rover Method: Convert Position Data to Rover starting point
+	- Take Position record
+- Give Instructions Method: Convert Instruction list into Rover Movements
+	- Take Rover name & Instruction list
+- Get Rover Position Method: Check dictionary for rover position
+	- Take Rover name for indexing
 
 ##### Rover Class
 - Rover Name
 - Attachments (Arms, Jetpack, Drill)
 - Current Position of Rover
+- Move method: M instructions increase/decrease X/Y values depending on direction
+- Turn Method: L/R inputs change Compass Direction
 
 ##### Plateau Class
 - 2D or 3D array for environment

@@ -1,15 +1,17 @@
 ﻿namespace Tests.Logic;
 
-public class MissionControlTests
+public class MissionControlRoverTests
 {
-    [SetUp]
-    public void Setup()
+    
+    [Test]
+    public void DeployRover()
     {
+        Assert.Pass();
     }
 
     [Test]
-    public void Test1()
+    public void GetRoverPosition()
     {
-        Assert.Pass();
+    
     }
 }

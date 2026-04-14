@@ -9,8 +9,16 @@ namespace MarsRover.Logic
 {
     public class MissionControl
     {
-        public static List<Rover> DeployedRovers = [];
+        public static Dictionary<String, Rover> DeployedRovers;
 
+        public MissionControl()
+        {
+            DeployedRovers = new Dictionary<String, Rover>();
+        }
 
+        public void DeployRover(Position startingPosition, Plateau plateau) 
+        {
+
+        }
     }
 }
