@@ -27,6 +27,8 @@ A terminal app for moving Rovers around on the surface of Mars.
 - Input Parser takes string inputs and converts them to usable instructions for the Logic Layer.
 	- Separate methods for Plateau, Position and Instructions.
 
+### Logic Layer
+
 ##### Mission Control Class
 - Check if positions are currently occupied by communicating with Rovers
 - Takes Plateau Object in constructor  
