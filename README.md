@@ -16,21 +16,13 @@ A terminal app for moving Rovers around on the surface of Mars.
 - Dangerous Terrain
 - Life?
 
+### Model Layer
+- Enum classes for Instruction (M, L, R) & Direction (N, E, S, W)
+- Plateau Size record - stores int Height and Width
+- Position Record - Stores X, Y & Direction 
 
-#### Instruction Parsing
-1. User should enter instructions via the terminal
-2. Parse Plateau size
-3. Parse Rover initial position
-4. Parse Instructions to Move Rover
-
-##### Instruction Parser Tests
-1. Return empty list when empty string is passed
-2. Return list with one value when passed single character string
-2. Return list with no values when passed single invalid character string
-3. Return list with multiple values when passed string with multiple characters
-4. Return an error when invalid data is passed.
-
-##### Instruction Set Tests
-1. Return an empty list when passing no values
-2. Return empty list when no vaues are created
-3. Return list with one value and return list with that instruction
+### Parsing Layer
+- Data Manager stores data for the program in memory
+	- Contains Plateau Size, Starting Position of Rover & next Instruction
+- Input Parser takes string inputs and converts them to usable instructions for the Logic Layer.
+	- Separate methods for Plateau, Position and Instructions.
